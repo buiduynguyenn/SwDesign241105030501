@@ -24,35 +24,18 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
 * Legacy Interface : Hệ thống mới cần tương tác với cơ sở dữ liệu kế thừa (Project Management Database) mà không làm gián đoạn hoạt động của nó.
 ## 3. Phân tích ca sử dụng Payment
   ### 3.1 Các lớp phân tích
-* Boundary:
-  - PaymentMethodUI: Lớp giao diện người dùng để hiển thị và nhận đầu vào từ nhân viên về phương thức thanh toán.
-  
-  Nhiệm vụ: Hiển thị giao diện để nhân viên chọn phương thức thanh toán, nhận đầu vào từ nhân viên và gửi yêu cầu tới lớp điều khiển.
-* Control:
-  - PaymentMethodController: Lớp điều khiển xử lý logic nghiệp vụ cho việc chọn phương thức thanh toán.
-  
-  Nhiệm vụ: Kiểm tra thông tin nhân viên, yêu cầu thông tin bổ sung (nếu cần), cập nhật phương thức thanh toán cho nhân viên, tương tác với các lớp thực thể.
-
-  Thuộc tính: employeeRepository (truy cập thông tin nhân viên), paymentMethodRepository (truy cập thông tin phương thức thanh toán).
-* Entity:
-  - Employee: Lớp thực thể đại diện cho thông tin nhân viên.
-  
-  Thuộc tính: employeeId, name, address, paymentMethod, ...
-
-  - PaymentMethod: Lớp thực thể đại diện cho các phương thức thanh toán khả dụng.
-  
-  Thuộc tính: paymentMethodId, paymentMethodType (nhận trực tiếp, gửi bưu điện, chuyển khoản ngân hàng), bankName, accountNumber, ...
-
-* Mối quan hệ giữa các lớp:
-  - PaymentMethodUI sẽ tương tác với PaymentMethodController để xử lý yêu cầu chọn phương thức thanh toán từ người dùng.
-  - PaymentMethodController sẽ tương tác với Employee và PaymentMethod để lấy thông tin cần thiết và cập nhật phương thức thanh toán cho nhân viên.
-  - Employee có quan hệ 1-1 với PaymentMethod, nghĩa là mỗi nhân viên có một phương thức thanh toán.
-  - PaymentMethod có quan hệ 1-nhiều với Employee, nghĩa là một phương thức thanh toán có thể được sử dụng bởi nhiều nhân viên.
- 
+    Boundary: PaymentForm, ProjectManagementDatabase
+    Control: PaymentController
+    Entity: Employee
+  ### 4.2 Nhiệm vụ của từng lớp
+    PaymentForm: Hiển thị giao diện cho việc chọn phương thức thanh toán
+    ProjectManagementDatabase: Kết nối và tương tác với cơ sở dữ liệu
+    PaymentController: Xử lý logic nghiệp vụ cho việc chọn phương thức thanh toán
+    Employee: Lưu trữ thông tin nhân viên
   ### Sequence Diagram
-    ![Diagram](https://www.planttext.com/api/plantuml/png/f5NDKi8m4BxdANOuqHbvWHuSH3Xm01qO7Y0q2sHiVanIdJwR1n_9Lp1jgDAMLgkzPRFVbs-_pQOVR-zJwwXncKW9JPmoi10wLJaYqJxC4wwfTF18Su7IhT2T5Dijk_VkbNH6fIcQMav5ka6jBFV7vDqK5pcami7ajgaXXWq-PsWTE0KMKqmSw902eimX3KIBv5ji32SgMOgrxMr9ofKSHwG3Lr2sQulXYAuAp_8b6-DviMGHQUV3f4zPXUtJqFB6djHhBVYWYqfiivJWIYKfXZctEgLvmqbG0TtVZ-s_cv1fHbsz2MDzkOe8yLA07w0M1cvX92XFHmJyDyGe4oxHoeEvFDunPj0MBhLucavLjqy49D00BO6zDYsayrgkmOPRrP0jQik8e6GzXZ5kYdwnS0__RDsCogSvEd_q8D_s7kRFBd6_DQs56UxOfTg2Raq5tW1D4fL9jyx47itPju4Z7-YhdQ-9xtqwEjuzFxxqfNyCEaclcLV3xagTxAU7m7CUk17DXo1KoSZKM-J_6Py0003__mC0)
+  ![Diagram](https://www.planttext.com/api/plantuml/png/f5LBJkD04DttAKgimW8BI9XXM20amaYpGA2P4rJiScXeTvlkCbBEDeiv4bUWRCTkCub945bOSdMzrwy-ptdz--ygC7gk2gCmPUVXfYYDMn6fKi8wrILQXdjS5MJvf_F5jlYri-oTCUJVdthtI2dVeiKbrNbpP5nWUC_TNNXZMVDAgUuTZYw7zy85d2JmXummGjd6eI1-S1dabKrPEwk6-H4UvGd9QG9BulN9NLd3mkHGRQRM-B42X6UQm0iQdI5JfrXe59fO4LZ7aBlAPWhaDyvsDA9rcaZ9luahRo578urhU3QbRhHgcfpsIFBU-I6oROzWUg4rG0gQwr0QNBK8QMu8ebIHN1nJlrRFh5V5llfCEMSzi9kzQsUtkx1liR0XfdcCBzjiPDaYjXxrzODpKl11WTeSDD4TScRjI9yh2i8eA6sNW5dcfTaz_YDLCbTnYdHf6xWPLQSfqxwMdr7fWkOzrKsZkWNQ9z0sbpnitBMFl5adRokQxA1_UvXLfbwLjSNMXxVD22OImSEnvRdyxuiYDB81gQU1K-yMzURkuld8_jyJ2FZIwVebTKveJJwFh9zso7c_vg5Aqswi-rZaHm9odcjvQLksonWdnz4NwykYvMLEL_AGluKt0000__y30000)
   ### Class Diagram
-  ![Diagram](https://www.planttext.com/api/plantuml/png/V9AzJiCm58NtF8NLgI2bKjSEgFmD7H0LfGzWujlMmh6DVJDOY2TZu95u1U8OGvmupHBfdFlpsSVVdrzhYzHWKukY4jHQigMk1eaFW2V5zXloNX3_CMwreEvH8rVIpY-2Qk2j0OlNZ76lKx6H1nNDIia3D_LUCuhGYXz5RiMjacYK461-LvLGQw4Sm1DePJagurRaVgI5MjqVrM_Over0TgAI2KXATY2WycU8z4s7dTJqpn218dG2CbWV1Xu1XzCwtOxr_4rbLpqx3IkoGyFbCTWlLBxU0L8kR6AC07nhX6Yzc_--7bggjc33zx5ON4q5Mam5xNioYPuhdyhpBuVPSaOkoxBxfxU_1idQz_q3003__mC0)
+  ![Diagram](https://www.planttext.com/api/plantuml/png/d5JRZjCm47tFLynZLw8Bpn5QxG95gaINbSeFJ9AXXFKbyZWh5SINyS0dyGiuZfFQRhe2dfASCtDcvcJitpz_tR95Otif2dviLOS69TG2cU-iDMtLMzhMMktRRmIlYi8py817ISg-rqR2zm9W3Ts8xCX-qSt7phPQSGaVMhQlzqv67Mvy69EWsb8pnfKmSfwIs0htVjSqXfWJgaBrk5MVTGG2D2rt0e-XrkhAWmUo-wJ42Tyb-YVyJH0FI93T6AFDpWNYWL9ctzUrmq_SZzaLex-wqZjKZXZSU8SMAsGA7ZaRbUDTkoLCrDiPyo4aEw6FH9-m4bI2VyJ-PZZ04ugsGKkRaBYQ5BQpkrSbL5eBGkKp69ye_3y_zfGmT5J29lhA4frNCRjSAOw8d1dhkM6jqKAG2OwSIqoLGiRyTyzsQM7qhD--6zY7U35NZHyoO7ynOpxHVniuMp7nppcm1eMI4Y0vN_zoRkvp9QnhtIjxtykAJ6xxPcvd63tb1gLpDFKtfJcdPTB-nQEPYsGyfgCkdEHSO6PoHruis-4FTNp9NL_VB2nn2JqJ5-U43xzu6poRDkz72RKXjy3ySbnabt1HSRsEyzXgvqzHt99gtBt-1m00__y30000)
 ## 4. Phân tích ca sử dụng Maintain Timecard
    ### 4.1 Các lớp phân tích
     Boundary: TimecardForm, ProjectManagementDatabase
