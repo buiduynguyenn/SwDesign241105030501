@@ -50,6 +50,7 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
   - PaymentMethod có quan hệ 1-nhiều với Employee, nghĩa là một phương thức thanh toán có thể được sử dụng bởi nhiều nhân viên.
  
   ### Sequence Diagram
+    ![Diagram](https://www.planttext.com/api/plantuml/png/f5NDKi8m4BxdANOuqHbvWHuSH3Xm01qO7Y0q2sHiVanIdJwR1n_9Lp1jgDAMLgkzPRFVbs-_pQOVR-zJwwXncKW9JPmoi10wLJaYqJxC4wwfTF18Su7IhT2T5Dijk_VkbNH6fIcQMav5ka6jBFV7vDqK5pcami7ajgaXXWq-PsWTE0KMKqmSw902eimX3KIBv5ji32SgMOgrxMr9ofKSHwG3Lr2sQulXYAuAp_8b6-DviMGHQUV3f4zPXUtJqFB6djHhBVYWYqfiivJWIYKfXZctEgLvmqbG0TtVZ-s_cv1fHbsz2MDzkOe8yLA07w0M1cvX92XFHmJyDyGe4oxHoeEvFDunPj0MBhLucavLjqy49D00BO6zDYsayrgkmOPRrP0jQik8e6GzXZ5kYdwnS0__RDsCogSvEd_q8D_s7kRFBd6_DQs56UxOfTg2Raq5tW1D4fL9jyx47itPju4Z7-YhdQ-9xtqwEjuzFxxqfNyCEaclcLV3xagTxAU7m7CUk17DXo1KoSZKM-J_6Py0003__mC0)
   ### Class Diagram
   ![Diagram](https://www.planttext.com/api/plantuml/png/V9AzJiCm58NtF8NLgI2bKjSEgFmD7H0LfGzWujlMmh6DVJDOY2TZu95u1U8OGvmupHBfdFlpsSVVdrzhYzHWKukY4jHQigMk1eaFW2V5zXloNX3_CMwreEvH8rVIpY-2Qk2j0OlNZ76lKx6H1nNDIia3D_LUCuhGYXz5RiMjacYK461-LvLGQw4Sm1DePJagurRaVgI5MjqVrM_Over0TgAI2KXATY2WycU8z4s7dTJqpn218dG2CbWV1Xu1XzCwtOxr_4rbLpqx3IkoGyFbCTWlLBxU0L8kR6AC07nhX6Yzc_--7bggjc33zx5ON4q5Mam5xNioYPuhdyhpBuVPSaOkoxBxfxU_1idQz_q3003__mC0)
 ## 4. Phân tích ca sử dụng Maintain Timecard
