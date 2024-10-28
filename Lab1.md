@@ -23,7 +23,7 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
 * Security : Bảo mật là rất quan trọng trong hệ thống payroll, vì nó liên quan đến thông tin nhạy cảm của nhân viên và dữ liệu tài chính.
 * Legacy Interface : Hệ thống mới cần tương tác với cơ sở dữ liệu kế thừa (Project Management Database) mà không làm gián đoạn hoạt động của nó.
 ## 3. Phân tích ca sử dụng Payment
-### Xác định các lớp phân tích cho ca sử dụng Payment
+  ### Xác định các lớp phân tích cho ca sử dụng Payment
 * Lớp Boundary:
   - PaymentMethodUI: Lớp giao diện người dùng để hiển thị và nhận đầu vào từ nhân viên về phương thức thanh toán.
   
