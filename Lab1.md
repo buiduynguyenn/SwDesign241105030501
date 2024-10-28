@@ -15,6 +15,7 @@ Lớp này là nơi thực hiện các quy tắc và logic của hệ thống, �
   - Lớp Truy cập Dữ liệu (Data Access Layer):
 Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần khác của hệ thống, cho phép dễ dàng thay đổi cơ sở dữ liệu mà không ảnh hưởng đến các lớp khác. Nó cũng đảm bảo rằng các truy vấn và thao tác dữ liệu được thực hiện một cách hiệu quả và an toàn.
 * Biểu đồ package mô tả kiến trúc
+
   ![Diagram](https://www.planttext.com/api/plantuml/png/R951JiCm44NtESMe6rQz0YeDMI0LgRImGbrCpITOjSUHnn54Y9Enu4XS0QU9H5l5op_Zz__C_7x_B3HnJArtHSFcm3LejevGIE9aWz2AEyGPVHQKt_EJ8jAT9CHNDjWDugFre4fIx4PXWoR4fBlYg_YdBbkr0bLQXTgQ2-wM7SUEIdQcTKVZ4LNvneKEe7kMZF4vrrWfW_TMjS-uZi5aifNwtFAM4zEDCKVNCx--icS5bK44viJmeKKEKdt0j8EQWLUqmP1AtsoZj4Tw1uHSpzJYSYiqdrzFZtIwgg5hShwflqFxPEu5vAK_u1y0003__mC0)
 
 ## 2. Cơ chế phân tích
