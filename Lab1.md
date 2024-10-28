@@ -27,7 +27,7 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
     Boundary: PaymentForm, ProjectManagementDatabase
     Control: PaymentController
     Entity: Employee
-  ### 4.2 Nhiệm vụ của từng lớp
+  ### 3.2 Nhiệm vụ của từng lớp
     PaymentForm: Hiển thị giao diện cho việc chọn phương thức thanh toán
     ProjectManagementDatabase: Kết nối và tương tác với cơ sở dữ liệu
     PaymentController: Xử lý logic nghiệp vụ cho việc chọn phương thức thanh toán
@@ -55,4 +55,5 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
   ### Class Diagram
   ![Diagram](https://www.planttext.com/api/plantuml/png/X5HDJy904BttLsmuwO63Lmu6WnWve0H8F1WFGpk1odxKcLsmCVuo3_ua_uAxfQo5GcpIf7spC_FUcsb_lhxxR86iKp99KWdCOfuhJ86oEqDAV2IYkhAS2mdbFdPnUOWFLa1BV71gWSGno2kp7H8P6YCpBF4uQugGFMhPhhf4UsySyKWNpZRH6KfCBMR7_JwFoG-CjcIaH8eIKaAmsEf5Q2d7JJl0S0fq2vNR5hm1cMU-UiKwekaAq_KiP33dHiyiMDU8WaoT39IC1TdCxCPwj_wUWgwiYng7gf2cHAoLTGNMm2Yh0GqAwqS5xrNf2T8JuleeOruM-EVkm16XRglpeJ6ytqXfjh2GKMJBz4Z8ra0aLErO4BFlhxF6syvKFzOcLfaLZuSPSIzs6dgWV7wf-K6s0o9XLmJp3Z4lecMq43dFzisRYYPaNlsYZK7xjLM-lMS62s2CsnJiEhdq-z4rexlI1nzMjtjzQbbxmZ5oSY8I4kBaUtwkWThPat4a_vuyBxKdtXm6tvFOjtFLyKcYuskMdMQJ5N2IzFrO_O_a5m00__y30000)
 ## 5. Hợp nhất kết quả phân tích
+![Diagram](https://www.planttext.com/api/plantuml/png/Z5LBRjim4Dth58Gs_G0EqAqH18bT5p4Gjq7J2uoaYSMQ8eKX5KCeUe9kUesU8OjkSf6Ue5SegO_rev9oOS3pXkIRDs-elu-_BxK1CaKcWk0LU_hvv_67J9dSfq-_W6bJ2WpqWSiS238M2z2QVGkONIk83tjIXKpMIYXYnvGRh90h8dMiWv6mMNMweWIf7_tkBbov0u1AjdP7emvo2y4UMJX6mkRUciCjb1bAyq5HnixFeoRtug99gbR2TIwWR59tQ5ALwDTlkeGzcXN8mrRUgr5u1rnmkRzA4a9jzx0ErQawRco5r6onPNIqll0COw3aVtYrkQEhhrL1UYlpmlG1T-ijgQyOcnkk9r2VKBLY9UyvPNT5b77ZOzeSjWDfrNRwl0S34MYSfMsFb7R7YEuSANX0Nu4ktZJanAeombf9GqfCVJ02l3PeSWIIPH_NVuRa7q3m10nkiboe4h7FgSWTCh197yv9nTO43JusImeo4LZfhvzpnCiKOq9BmoTQIxwona3Dghs-BKB51r_SIxTgm4OQRZnpE8mFvM_Lj2LXbJQeQ84Dl4sMxCwG7QWEov6qaY2SdalsAN8cwg7zPdWsTxsOxasjIZVSwh9a7uiiGXhujQKyxkF013tGsyoPUaq3--fzGGlkolHLefVkFOMoYzhtsXHwUafj1Zl6k6JkjyTB6H3NzM4UITgg_9BCc6vediyem70bTSfp7VGVvxEpY-cK1jEvTNbjRsRWsISh20RlhikTZbtWcSH-vXn-8ZM3FyFgD1xXkv0j5Yny6tRN1PSe4_lP_GS00F__0m00)
 
