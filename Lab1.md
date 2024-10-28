@@ -23,6 +23,7 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
 * Security : Bảo mật là rất quan trọng trong hệ thống payroll, vì nó liên quan đến thông tin nhạy cảm của nhân viên và dữ liệu tài chính.
 * Legacy Interface : Hệ thống mới cần tương tác với cơ sở dữ liệu kế thừa (Project Management Database) mà không làm gián đoạn hoạt động của nó.
 ## 3. Phân tích ca sử dụng Payment
+### Xác định các lớp phân tích cho ca sử dụng Payment
 * Lớp Boundary:
   - PaymentMethodUI: Lớp giao diện người dùng để hiển thị và nhận đầu vào từ nhân viên về phương thức thanh toán.
   
@@ -38,17 +39,18 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
   
   Thuộc tính: employeeId, name, address, paymentMethod, ...
 
-  Quan hệ: 1 Employee có 1 PaymentMethod.
   - PaymentMethod: Lớp thực thể đại diện cho các phương thức thanh toán khả dụng.
   
   Thuộc tính: paymentMethodId, paymentMethodType (nhận trực tiếp, gửi bưu điện, chuyển khoản ngân hàng), bankName, accountNumber, ...
 
-  Quan hệ: 1 PaymentMethod được sử dụng bởi nhiều Employee.
 * Mối quan hệ giữa các lớp:
   - PaymentMethodUI sẽ tương tác với PaymentMethodController để xử lý yêu cầu chọn phương thức thanh toán từ người dùng.
   - PaymentMethodController sẽ tương tác với Employee và PaymentMethod để lấy thông tin cần thiết và cập nhật phương thức thanh toán cho nhân viên.
   - Employee có quan hệ 1-1 với PaymentMethod, nghĩa là mỗi nhân viên có một phương thức thanh toán.
   - PaymentMethod có quan hệ 1-nhiều với Employee, nghĩa là một phương thức thanh toán có thể được sử dụng bởi nhiều nhân viên.
+ 
+  ### Sequence Diagram
+  ### Class Diagram
 ## 4. Phân tích ca sử dụng Maintain Timecard
 ## 5. Hợp nhất kết quả phân tích
 
