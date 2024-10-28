@@ -64,8 +64,12 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
                         Thực hiện logic nghiệp vụ cho các thao tác bảng chấm công
                         Xử lý việc tạo, lấy và nộp bảng chấm công
                         Thực hiện kiểm tra số giờ và ngày tháng
+    Employee: Lưu trữ thông tin nhân viên
+    Timecard: Lưu trữ dữ liệu bảng chấm công
+    ProjectManagementDatabase: Lấy danh sách mã dự án
    ### Sequence Diagram
   ![Diagram](https://www.planttext.com/api/plantuml/png/d5HBJiCm4Dtx55Ot5AaL-owWwWyMG17q0XDdr1eS6_bJrBEnu4XSWR6ZDAdQH2rPH1ddlVcyDydlzy_OUR0-58g1yCRoUV6fp0wHPIRe7EoEhsI10co-CBQeJr-iUKVXdq336WlKVWOUCd38XD7U6hNdJSjOeMK4axxEMCMzgYYVfuCU1nSRAIF6hYRWfE0BPRxO7ZgyFUXin448TAuwwr-pvkicl6venDVeJp1gH9Ctui8YU5pQU_Ijw5PXKh7f1kmQdqEHeNMKWu7oV3RXi0Mf85F8E5sjEVZmQ6pHpCXG4OZo1Vt_Z6YjiObrg201A_MfB0qjTS0R0LgWkYClStAAB2CP7aoWNjgjmeXAe7vEWWusyN5GJdAURrjGCb9RRTYlJrG8nSUZB6GqBUgTo0S3jXdkO1jB95MbxkQrw5ZgyXOogjyXYKk0CxUs15-mk9LSA-D1NQu2-h9_Zx5Oat9YR1VIXtXYWOwGw5yHygLMkowHkwKTqvr-Nty0003__mC0)
-   
+  ### Class Diagram
+  ![Diagram](https://www.planttext.com/api/plantuml/png/X5HDJy904BttLsmuwO63Lmu6WnWve0H8F1WFGpk1odxKcLsmCVuo3_ua_uAxfQo5GcpIf7spC_FUcsb_lhxxR86iKp99KWdCOfuhJ86oEqDAV2IYkhAS2mdbFdPnUOWFLa1BV71gWSGno2kp7H8P6YCpBF4uQugGFMhPhhf4UsySyKWNpZRH6KfCBMR7_JwFoG-CjcIaH8eIKaAmsEf5Q2d7JJl0S0fq2vNR5hm1cMU-UiKwekaAq_KiP33dHiyiMDU8WaoT39IC1TdCxCPwj_wUWgwiYng7gf2cHAoLTGNMm2Yh0GqAwqS5xrNf2T8JuleeOruM-EVkm16XRglpeJ6ytqXfjh2GKMJBz4Z8ra0aLErO4BFlhxF6syvKFzOcLfaLZuSPSIzs6dgWV7wf-K6s0o9XLmJp3Z4lecMq43dFzisRYYPaNlsYZK7xjLM-lMS62s2CsnJiEhdq-z4rexlI1nzMjtjzQbbxmZ5oSY8I4kBaUtwkWThPat4a_vuyBxKdtXm6tvFOjtFLyKcYuskMdMQJ5N2IzFrO_O_a5m00__y30000)
 ## 5. Hợp nhất kết quả phân tích
 
