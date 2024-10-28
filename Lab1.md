@@ -40,7 +40,9 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
 
   Quan hệ: 1 Employee có 1 PaymentMethod.
   - PaymentMethod: Lớp thực thể đại diện cho các phương thức thanh toán khả dụng.
+  
   Thuộc tính: paymentMethodId, paymentMethodType (nhận trực tiếp, gửi bưu điện, chuyển khoản ngân hàng), bankName, accountNumber, ...
+
   Quan hệ: 1 PaymentMethod được sử dụng bởi nhiều Employee.
 * Mối quan hệ giữa các lớp:
   - PaymentMethodUI sẽ tương tác với PaymentMethodController để xử lý yêu cầu chọn phương thức thanh toán từ người dùng.
