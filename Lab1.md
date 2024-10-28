@@ -51,6 +51,7 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
  
   ### Sequence Diagram
   ### Class Diagram
+  ![Diagram](https://www.planttext.com/api/plantuml/png/V9AzJiCm58NtF8NLgI2bKjSEgFmD7H0LfGzWujlMmh6DVJDOY2TZu95u1U8OGvmupHBfdFlpsSVVdrzhYzHWKukY4jHQigMk1eaFW2V5zXloNX3_CMwreEvH8rVIpY-2Qk2j0OlNZ76lKx6H1nNDIia3D_LUCuhGYXz5RiMjacYK461-LvLGQw4Sm1DePJagurRaVgI5MjqVrM_Over0TgAI2KXATY2WycU8z4s7dTJqpn218dG2CbWV1Xu1XzCwtOxr_4rbLpqx3IkoGyFbCTWlLBxU0L8kR6AC07nhX6Yzc_--7bggjc33zx5ON4q5Mam5xNioYPuhdyhpBuVPSaOkoxBxfxU_1idQz_q3003__mC0)
 ## 4. Phân tích ca sử dụng Maintain Timecard
 ## 5. Hợp nhất kết quả phân tích
 
