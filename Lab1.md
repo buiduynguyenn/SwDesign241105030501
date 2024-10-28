@@ -1,7 +1,11 @@
 # PHÂN TÍCH KIẾN TRÚC, CƠ CHẾ, CA SỬ DỤNG
 ## 1. Phân tích kiến trúc
 * Đề xuất kiến trúc
-* Giải thích lý do lựa chọn 
+* Giải thích lý do lựa chọn
+  Tính phân tách rõ ràng: Kiến trúc phân lớp giúp tách biệt các thành phần chức năng của hệ thống thành các lớp độc lập, tăng tính mềm dẻo và dễ bảo trì.
+  Quản lý dữ liệu và tích hợp: Lớp Hạ tầng cho phép tách biệt logic truy xuất và thao tác dữ liệu, dễ dàng tích hợp với các nguồn dữ liệu khác như DB2 và Project Management Database.
+  Tái sử dụng: Các lớp trong kiến trúc phân lớp có thể được tái sử dụng trong các dự án khác, giúp tiết kiệm thời gian và chi phí phát triển.
+  Bảo mật và kiểm soát truy cập: Kiến trúc phân lớp cho phép tập trung logic kiểm soát truy cập vào một lớp riêng, dễ dàng quản lý và bảo trì.
 * Ý nghĩa từng thành phần trong kiến trúc
 * Biểu đồ package mô tả kiến trúc
 
