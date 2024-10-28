@@ -23,18 +23,18 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
 * Security : Bảo mật là rất quan trọng trong hệ thống payroll, vì nó liên quan đến thông tin nhạy cảm của nhân viên và dữ liệu tài chính.
 * Legacy Interface : Hệ thống mới cần tương tác với cơ sở dữ liệu kế thừa (Project Management Database) mà không làm gián đoạn hoạt động của nó.
 ## 3. Phân tích ca sử dụng Payment
-  ### Xác định các lớp phân tích cho ca sử dụng Payment
-* Lớp Boundary:
+  ### 3.1 Các lớp phân tích
+* Boundary:
   - PaymentMethodUI: Lớp giao diện người dùng để hiển thị và nhận đầu vào từ nhân viên về phương thức thanh toán.
   
   Nhiệm vụ: Hiển thị giao diện để nhân viên chọn phương thức thanh toán, nhận đầu vào từ nhân viên và gửi yêu cầu tới lớp điều khiển.
-* Lớp Control:
+* Control:
   - PaymentMethodController: Lớp điều khiển xử lý logic nghiệp vụ cho việc chọn phương thức thanh toán.
   
   Nhiệm vụ: Kiểm tra thông tin nhân viên, yêu cầu thông tin bổ sung (nếu cần), cập nhật phương thức thanh toán cho nhân viên, tương tác với các lớp thực thể.
 
   Thuộc tính: employeeRepository (truy cập thông tin nhân viên), paymentMethodRepository (truy cập thông tin phương thức thanh toán).
-* Lớp Entity:
+* Entity:
   - Employee: Lớp thực thể đại diện cho thông tin nhân viên.
   
   Thuộc tính: employeeId, name, address, paymentMethod, ...
@@ -54,6 +54,9 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
   ### Class Diagram
   ![Diagram](https://www.planttext.com/api/plantuml/png/V9AzJiCm58NtF8NLgI2bKjSEgFmD7H0LfGzWujlMmh6DVJDOY2TZu95u1U8OGvmupHBfdFlpsSVVdrzhYzHWKukY4jHQigMk1eaFW2V5zXloNX3_CMwreEvH8rVIpY-2Qk2j0OlNZ76lKx6H1nNDIia3D_LUCuhGYXz5RiMjacYK461-LvLGQw4Sm1DePJagurRaVgI5MjqVrM_Over0TgAI2KXATY2WycU8z4s7dTJqpn218dG2CbWV1Xu1XzCwtOxr_4rbLpqx3IkoGyFbCTWlLBxU0L8kR6AC07nhX6Yzc_--7bggjc33zx5ON4q5Mam5xNioYPuhdyhpBuVPSaOkoxBxfxU_1idQz_q3003__mC0)
 ## 4. Phân tích ca sử dụng Maintain Timecard
-   ### Xác định các lớp phân tích cho ca sử dụng Maintain Timecard
+   ### 4.1 Các lớp phân tích
+    Boundary: TimecardForm, ProjectManagementDatabase
+    Control: TimecardController
+    Entity : Timecard, Employee
 ## 5. Hợp nhất kết quả phân tích
 
