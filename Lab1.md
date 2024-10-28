@@ -25,18 +25,18 @@ Lớp này giúp tách biệt logic truy cập dữ liệu khỏi các phần kh
 ## 3. Phân tích ca sử dụng Payment
 * Lớp Boundary:
   - PaymentMethodUI: Lớp giao diện người dùng để hiển thị và nhận đầu vào từ nhân viên về phương thức thanh toán.
-Nhiệm vụ: Hiển thị giao diện để nhân viên chọn phương thức thanh toán, nhận đầu vào từ nhân viên và gửi yêu cầu tới lớp điều khiển.
+  Nhiệm vụ: Hiển thị giao diện để nhân viên chọn phương thức thanh toán, nhận đầu vào từ nhân viên và gửi yêu cầu tới lớp điều khiển.
 * Lớp Control:
   - PaymentMethodController: Lớp điều khiển xử lý logic nghiệp vụ cho việc chọn phương thức thanh toán.
-Nhiệm vụ: Kiểm tra thông tin nhân viên, yêu cầu thông tin bổ sung (nếu cần), cập nhật phương thức thanh toán cho nhân viên, tương tác với các lớp thực thể.
-Thuộc tính: employeeRepository (truy cập thông tin nhân viên), paymentMethodRepository (truy cập thông tin phương thức thanh toán).
+  Nhiệm vụ: Kiểm tra thông tin nhân viên, yêu cầu thông tin bổ sung (nếu cần), cập nhật phương thức thanh toán cho nhân viên, tương tác với các lớp thực thể.
+  Thuộc tính: employeeRepository (truy cập thông tin nhân viên), paymentMethodRepository (truy cập thông tin phương thức thanh toán).
 * Lớp Entity:
   - Employee: Lớp thực thể đại diện cho thông tin nhân viên.
-Thuộc tính: employeeId, name, address, paymentMethod, ...
-Quan hệ: 1 Employee có 1 PaymentMethod.
-PaymentMethod: Lớp thực thể đại diện cho các phương thức thanh toán khả dụng.
-Thuộc tính: paymentMethodId, paymentMethodType (nhận trực tiếp, gửi bưu điện, chuyển khoản ngân hàng), bankName, accountNumber, ...
-Quan hệ: 1 PaymentMethod được sử dụng bởi nhiều Employee.
+  Thuộc tính: employeeId, name, address, paymentMethod, ...
+  Quan hệ: 1 Employee có 1 PaymentMethod.
+  - PaymentMethod: Lớp thực thể đại diện cho các phương thức thanh toán khả dụng.
+  Thuộc tính: paymentMethodId, paymentMethodType (nhận trực tiếp, gửi bưu điện, chuyển khoản ngân hàng), bankName, accountNumber, ...
+  Quan hệ: 1 PaymentMethod được sử dụng bởi nhiều Employee.
 * Mối quan hệ giữa các lớp:
   - PaymentMethodUI sẽ tương tác với PaymentMethodController để xử lý yêu cầu chọn phương thức thanh toán từ người dùng.
   - PaymentMethodController sẽ tương tác với Employee và PaymentMethod để lấy thông tin cần thiết và cập nhật phương thức thanh toán cho nhân viên.
