@@ -63,6 +63,12 @@ Nhiệm vụ: Đại diện cho đối tượng báo cáo, chứa các thuộc t
   ## Class Diagram
  ![Diagram](https://www.planttext.com/api/plantuml/png/Z5BBJiD03BpdA_O8XuXxXAgY0YT0YF83RcB2Lli8jXifGdmP1pw9Ny1BLk7L0BciCkFCpepp-looP06IdNT5KJjWDYUDjy6o48ZjyGQxI78UoPl7mhm_ZUNEmP2mWyECjIZZv8gi85cOc3mziXDA-B13bZNqgDZJRtUlOX2ApY5D3cf24FmcsOEpZS8_733q7xFJLIEI9Kirb5vlXmvDPTP2DhIPsM1hmwaAAv6E36Deze2-St50l0AFhDI5PZaUrHPJKm4fsTHO6BvOkgQunLek8K2BNabLXWqmJi7lKEhxitn9OcT3pcwnB1T_rLmPrdIiDOzDxXNxD9yaSvrLtWt_vvlvl9NkGrl37lae9MEZcuMYMAglzAk-0G00__y30000)
 
+ Giải thích biểu đồ lớp
+AdministrativeReportForm: Lớp boundary hiển thị biểu mẫu cho Payroll Administrator nhập thông tin và tương tác với người dùng trong suốt quá trình tạo báo cáo. Gửi thông tin đầu vào đến AdministrativeReportController và hiển thị báo cáo sau khi được tạo.
+AdministrativeReportController: Điều phối logic nghiệp vụ, bao gồm xác minh thông tin và tạo đối tượng Report. Khi Payroll Administrator yêu cầu lưu báo cáo, lớp này tương tác với ProjectManagementDatabase để thực hiện lưu trữ.
+Report: Chứa các thông tin chính của báo cáo, như loại báo cáo và phạm vi ngày. Lớp này có thể bao gồm phương thức generateContent() để xây dựng nội dung báo cáo dựa trên tiêu chí đầu vào.
+ProjectManagementDatabase: Cung cấp khả năng truy xuất và lưu trữ dữ liệu báo cáo, hỗ trợ lưu báo cáo khi Payroll Administrator chọn lưu trữ.
+
 
 # Phân tích ca sử dụng Maintain Employee Info
   ## Các lớp phân tích
