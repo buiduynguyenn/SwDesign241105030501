@@ -31,8 +31,24 @@
 
 # Phân tích ca sử dụng Create Adminstrative Report
   ## Các lớp phân tích
+  Boundary: AdministrativeReportForm và ProjectManagementDatabase
+  Control: AdministrativeReportController
+  Entity: Report
 
   ## Nhiệm vụ của từng lớp
+  Lớp Boundary
+AdministrativeReportForm:
+
+Nhiệm vụ: Cung cấp giao diện để Payroll Administrator nhập các tiêu chí báo cáo, như loại báo cáo, khoảng thời gian, và danh sách nhân viên. Cũng hiển thị báo cáo sau khi được tạo và cho phép người dùng chọn lưu báo cáo nếu cần.
+ProjectManagementDatabase:
+
+Nhiệm vụ: Cung cấp kết nối và truy xuất dữ liệu từ cơ sở dữ liệu, bao gồm lấy thông tin về nhân viên (như giờ làm việc hoặc lương) để sử dụng trong báo cáo. Đồng thời, lớp này hỗ trợ lưu báo cáo nếu Payroll Administrator chọn lưu.
+Lớp Control
+AdministrativeReportController:
+Nhiệm vụ: Điều phối logic nghiệp vụ để tạo báo cáo dựa trên tiêu chí từ Payroll Administrator. Xử lý việc xác minh thông tin đầu vào, tạo đối tượng báo cáo và gửi yêu cầu lưu trữ đến ProjectManagementDatabase nếu cần.
+Lớp Entity
+Report:
+Nhiệm vụ: Đại diện cho đối tượng báo cáo, chứa các thuộc tính như loại báo cáo, ngày bắt đầu và kết thúc, danh sách nhân viên liên quan, và nội dung của báo cáo.
 
   ## Sequence Diagram
   
