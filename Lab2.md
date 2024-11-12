@@ -32,7 +32,9 @@
 # Phân tích ca sử dụng Create Adminstrative Report
   ## Các lớp phân tích
   Boundary: AdministrativeReportForm và ProjectManagementDatabase
+  
   Control: AdministrativeReportController
+  
   Entity: Report
 
   ## Nhiệm vụ của từng lớp
