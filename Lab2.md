@@ -58,6 +58,7 @@ Nhiệm vụ: Điều phối logic nghiệp vụ để tạo báo cáo dựa tr�
 Nhiệm vụ: Đại diện cho đối tượng báo cáo, chứa các thuộc tính như loại báo cáo, ngày bắt đầu và kết thúc, danh sách nhân viên liên quan, và nội dung của báo cáo.
 
   ## Sequence Diagram
+   ![Diagram](https://www.planttext.com/api/plantuml/png/f5HDJlCm4Dtx57C047iMYAg0n0Af-ZZ1r9wcW_oJpvw2SZOM78ahC6uQ2AXDY-YYJUrvRvxVlFZzzUsw26RP16_GIigmm2udxsSkSEGY6UiY5bZCp39jeiFSmMYJd-aVjIdBNSh1s1H5qNiBvlsUfsme2ai7_RfnABZ4Gh38wOciF634Xe8MtUnsZD5wJ_18_pSKBS4DOvCnm3dCCw7GZuO3irdCuFpge5our49bB0AImFPCkOSUn2YVibwgXD9wx7RrYcQXp0YhwiFHlhTHgmUiT2sTWTjsnzZeCuNMfuu88WOgPbBDjDVQwv6Y-obpB-C8LKzvQ1fAUKTYrryg7GcoLvte1UvNmB6weCmf0XS8N0h71ZH876tAMMaDwEUuY0aBLLzefVezDBZOSO_xR_iS7OToFREZII9rSVyWlYlkrvHpFiuJf6Kr4rvOrhyPmeJc8O0DHT9j6cRyEGKzjLsdLAZKU1VKzqBMdm4_oPVHwx75Zx1_Y-GNcVviUvmOYAbKZbbLyN2lz4SzY3j5h_vPiPwjcl3tv0viEwcLr1doPRYtm76nc5rThQ6xrkzwGNy0003__mC0)
   
   ## Class Diagram
 
