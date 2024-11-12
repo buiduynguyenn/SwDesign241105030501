@@ -46,6 +46,15 @@ content: Nội dung của báo cáo đã được tạo dựa trên tiêu chí.
   ## Class Diagram
    ![Diagram](https://www.planttext.com/api/plantuml/png/V591JiGm3Bpt5Jd2eUBU0rgfm0s4M3xWfgORb2R5TYjLY9Tnu4by0OTMrRBTaakL6MV67lVxysl70YHzwxFCUc0sjstduuZuX5qakOlKclVC_9xQSUTXJDZ5vOmrA5DbIKwG72pCN3sn2qhurYFB7WPKxEEyQnc3KFGUQV6sX21u8ZQ0TxN2AszM-QLsmsIMphMbT7qUEpI5sGkvqCnCXOqBDsgWHFhCC8Pw3Te3K8CFVLjfroSwLkV187_Xb5r0IkrFz76hZnHVqSez16YmLLATe0B69P0N57ieZqnvS_epAytpw-tC2yCw8clcKwpPPkLQHXzFg-B_NsqFMEX2D2KSaA_I96nqnP1bE-qf_QS_0000__y30000)
 
+   . Giải thích biểu đồ lớp
+EmployeeReportForm: Lớp boundary cho phép Employee nhập tiêu chí báo cáo, gửi thông tin đến EmployeeReportController, hiển thị báo cáo, và cung cấp tùy chọn lưu báo cáo.
+
+EmployeeReportController: Điều phối logic nghiệp vụ của ca sử dụng, bao gồm xác minh tiêu chí, tạo đối tượng báo cáo EmployeeReport, và lưu trữ khi được yêu cầu.
+
+EmployeeReport: Đại diện cho báo cáo của Employee với các thuộc tính cần thiết để tạo báo cáo theo tiêu chí.
+
+ProjectManagementDatabase: Tương tác với cơ sở dữ liệu để lấy danh sách số charge khi cần và lưu báo cáo nếu Employee yêu cầu.
+
 
 # Phân tích ca sử dụng Maintain Purchase Order
   ## Các lớp phân tích
