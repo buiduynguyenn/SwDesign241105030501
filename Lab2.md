@@ -1,64 +1,64 @@
 # Phân tích ca sử dụng Create Employee
-## Các lớp phân tích
+  ## Các lớp phân tích
 
-## Nhiệm vụ của từng lớp
+  ## Nhiệm vụ của từng lớp
 
-## Sequence Diagram
+  ## Sequence Diagram
   ![Diagram](https://www.planttext.com/api/plantuml/png/d5HBJiCm4Dtx55Ot5AaL-owWwWyMG17q0XDdr1eS6_bJrBEnu4XSWR6ZDAdQH2rPH1ddlVcyDydlzy_OUR0-58g1yCRoUV6fp0wHPIRe7EoEhsI10co-CBQeJr-iUKVXdq336WlKVWOUCd38XD7U6hNdJSjOeMK4axxEMCMzgYYVfuCU1nSRAIF6hYRWfE0BPRxO7ZgyFUXin448TAuwwr-pvkicl6venDVeJp1gH9Ctui8YU5pQU_Ijw5PXKh7f1kmQdqEHeNMKWu7oV3RXi0Mf85F8E5sjEVZmQ6pHpCXG4OZo1Vt_Z6YjiObrg201A_MfB0qjTS0R0LgWkYClStAAB2CP7aoWNjgjmeXAe7vEWWusyN5GJdAURrjGCb9RRTYlJrG8nSUZB6GqBUgTo0S3jXdkO1jB95MbxkQrw5ZgyXOogjyXYKk0CxUs15-mk9LSA-D1NQu2-h9_Zx5Oat9YR1VIXtXYWOwGw5yHygLMkowHkwKTqvr-Nty0003__mC0)
-## Class Diagram
+  ## Class Diagram
 
 
 # Phân tích ca sử dụng Maintain Purchase Order
-## Các lớp phân tích
+  ## Các lớp phân tích
 
-## Nhiệm vụ của từng lớp
+  ## Nhiệm vụ của từng lớp
 
-## Sequence Diagram
+  ## Sequence Diagram
   
-## Class Diagram
+  ## Class Diagram
 
 
 # Phân tích ca sử dụng Login
-## Các lớp phân tích
+  ## Các lớp phân tích
 
-## Nhiệm vụ của từng lớp
+  ## Nhiệm vụ của từng lớp
 
-## Sequence Diagram
+  ## Sequence Diagram
   
-## Class Diagram
+  ## Class Diagram
 
 
 
 # Phân tích ca sử dụng Create Adminstrative Report
-## Các lớp phân tích
+  ## Các lớp phân tích
 
-## Nhiệm vụ của từng lớp
+  ## Nhiệm vụ của từng lớp
 
-## Sequence Diagram
+  ## Sequence Diagram
   
-## Class Diagram
+  ## Class Diagram
 
 
 
 # Phân tích ca sử dụng Maintain Employee Info
-## Các lớp phân tích
+  ## Các lớp phân tích
 
-## Nhiệm vụ của từng lớp
+  ## Nhiệm vụ của từng lớp
 
-## Sequence Diagram
+  ## Sequence Diagram
   
-## Class Diagram
+  ## Class Diagram
 
 
 
 # Phân tích ca sử dụng Run Payroll
-## Các lớp phân tích
+  ## Các lớp phân tích
 
-## Nhiệm vụ của từng lớp
+  ## Nhiệm vụ của từng lớp
 
-## Sequence Diagram
+  ## Sequence Diagram
   
-## Class Diagram
+  ## Class Diagram
 
 
 
