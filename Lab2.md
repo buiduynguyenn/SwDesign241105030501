@@ -4,7 +4,7 @@
   ## Nhiệm vụ của từng lớp
 
   ## Sequence Diagram
-  ![Diagram](https://www.planttext.com/api/plantuml/png/d5HBJiCm4Dtx55Ot5AaL-owWwWyMG17q0XDdr1eS6_bJrBEnu4XSWR6ZDAdQH2rPH1ddlVcyDydlzy_OUR0-58g1yCRoUV6fp0wHPIRe7EoEhsI10co-CBQeJr-iUKVXdq336WlKVWOUCd38XD7U6hNdJSjOeMK4axxEMCMzgYYVfuCU1nSRAIF6hYRWfE0BPRxO7ZgyFUXin448TAuwwr-pvkicl6venDVeJp1gH9Ctui8YU5pQU_Ijw5PXKh7f1kmQdqEHeNMKWu7oV3RXi0Mf85F8E5sjEVZmQ6pHpCXG4OZo1Vt_Z6YjiObrg201A_MfB0qjTS0R0LgWkYClStAAB2CP7aoWNjgjmeXAe7vEWWusyN5GJdAURrjGCb9RRTYlJrG8nSUZB6GqBUgTo0S3jXdkO1jB95MbxkQrw5ZgyXOogjyXYKk0CxUs15-mk9LSA-D1NQu2-h9_Zx5Oat9YR1VIXtXYWOwGw5yHygLMkowHkwKTqvr-Nty0003__mC0)
+
   ## Class Diagram
 
 
@@ -64,9 +64,16 @@ Nhiệm vụ: Đại diện cho đối tượng báo cáo, chứa các thuộc t
  ![Diagram](https://www.planttext.com/api/plantuml/png/Z5BBJiD03BpdA_O8XuXxXAgY0YT0YF83RcB2Lli8jXifGdmP1pw9Ny1BLk7L0BciCkFCpepp-looP06IdNT5KJjWDYUDjy6o48ZjyGQxI78UoPl7mhm_ZUNEmP2mWyECjIZZv8gi85cOc3mziXDA-B13bZNqgDZJRtUlOX2ApY5D3cf24FmcsOEpZS8_733q7xFJLIEI9Kirb5vlXmvDPTP2DhIPsM1hmwaAAv6E36Deze2-St50l0AFhDI5PZaUrHPJKm4fsTHO6BvOkgQunLek8K2BNabLXWqmJi7lKEhxitn9OcT3pcwnB1T_rLmPrdIiDOzDxXNxD9yaSvrLtWt_vvlvl9NkGrl37lae9MEZcuMYMAglzAk-0G00__y30000)
 
  Giải thích biểu đồ lớp
+ 
 AdministrativeReportForm: Lớp boundary hiển thị biểu mẫu cho Payroll Administrator nhập thông tin và tương tác với người dùng trong suốt quá trình tạo báo cáo. Gửi thông tin đầu vào đến AdministrativeReportController và hiển thị báo cáo sau khi được tạo.
+
+
 AdministrativeReportController: Điều phối logic nghiệp vụ, bao gồm xác minh thông tin và tạo đối tượng Report. Khi Payroll Administrator yêu cầu lưu báo cáo, lớp này tương tác với ProjectManagementDatabase để thực hiện lưu trữ.
+
+
 Report: Chứa các thông tin chính của báo cáo, như loại báo cáo và phạm vi ngày. Lớp này có thể bao gồm phương thức generateContent() để xây dựng nội dung báo cáo dựa trên tiêu chí đầu vào.
+
+
 ProjectManagementDatabase: Cung cấp khả năng truy xuất và lưu trữ dữ liệu báo cáo, hỗ trợ lưu báo cáo khi Payroll Administrator chọn lưu trữ.
 
 
