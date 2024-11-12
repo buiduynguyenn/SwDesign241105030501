@@ -6,24 +6,24 @@ EmployeeReportForm: Cung cấp giao diện cho Employee để nhập các tiêu 
 
 ProjectManagementDatabase: Tương tác với cơ sở dữ liệu để lấy danh sách số charge của các dự án, cần thiết khi Employee chọn báo cáo "Total Hours Worked for a Project".
 
--Lớp Control
+  - Lớp Control
 
 EmployeeReportController: Điều phối logic nghiệp vụ của ca sử dụng, xử lý yêu cầu tạo báo cáo từ Employee. Nhận các tiêu chí đầu vào, xác minh thông tin, và tạo báo cáo dựa trên các tiêu chí này. Khi Employee yêu cầu lưu báo cáo, lớp này sẽ tương tác với hệ thống lưu trữ để lưu báo cáo.
 
--Lớp Entity
+  - Lớp Entity
 
 EmployeeReport: Đại diện cho báo cáo được tạo, bao gồm các thuộc tính như loại báo cáo, khoảng thời gian, và thông tin chi tiết khác (như số charge nếu có).
 
   ## Nhiệm vụ của từng lớp
 
--  Lớp Boundary
+  - Lớp Boundary
   
 EmployeeReportForm: Hiển thị biểu mẫu cho Employee để nhập các tiêu chí tạo báo cáo. Sau khi nhận tiêu chí, gửi dữ liệu đến EmployeeReportController để tạo báo cáo, hiển thị báo cáo đã được tạo, và cung cấp tùy chọn lưu báo cáo.
 
 ProjectManagementDatabase: Cung cấp danh sách số charge của các dự án khi Employee chọn báo cáo "Total Hours Worked for a Project".
 
 
--Lớp Control
+  - Lớp Control
 
 EmployeeReportController: Xử lý nghiệp vụ cho yêu cầu tạo báo cáo của Employee, bao gồm:
 Nhận các tiêu chí từ EmployeeReportForm.
@@ -32,7 +32,7 @@ Tạo đối tượng EmployeeReport với các thông tin cần thiết.
 Nếu Employee yêu cầu lưu báo cáo, gửi yêu cầu đến hệ thống lưu trữ.
 
 
--Lớp Entity
+  - Lớp Entity
 
 EmployeeReport: Đối tượng đại diện cho báo cáo của Employee với các thuộc tính như:
 reportType: Loại báo cáo (Tổng số giờ làm việc, Tổng giờ làm việc cho dự án, Ngày nghỉ phép/ốm, hoặc Tổng tiền lương đến thời điểm hiện tại).
