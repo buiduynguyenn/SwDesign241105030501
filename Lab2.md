@@ -41,8 +41,10 @@ chargeNumber (nếu có): Số charge dự án khi báo cáo là "Total Hours Wo
 content: Nội dung của báo cáo đã được tạo dựa trên tiêu chí.
 
   ## Sequence Diagram
+  ![Diagram](https://www.planttext.com/api/plantuml/png/f9J1JiCm38RlUGgBC_00713I1e834c98dBtKwm9fCXmNj6VZm2Fn2ZXTMqRLZGbwMBl4_nVdjvFFzu-B9CXILzwWbSXmMQryN1EPUQn3WRpkH-vf5Lck8bV6nY0S_M1giXdrn8Q2E1bAJO62Sqm4TnoVoCej1Yofqk1fEsECwZp1Z5vg2fPWwh1ahE049amer2EXPPf-uEHy95Kuqq1b9G69O3SCtaX7ehSOgfowjFAuRkDLxOJO8Ioo1x-kUnaqkjFAUaN7K3IhOoZrcyIUcbzo6Fggr1c5OfYGGIzmiu2ZXoZeuJhMdE0nyZCLELV0pl0Z0_hifElAEolJ62diw9N0Bf5BWb1NS-BKC7Vhzcz7cJM7CUA-B4VzxggrXxLJEoElsV-KZcHnQ7rIWrFtVm9rQbZnVVjIscIxOI7EiyVmvcJvNVi_-rHI8CQSPNiUkZRgtRBB61EbV78IQjrbsP-TWrpTEdcDVaHxkA_V07qrt7yrypPFy-kkfdyri_vPEDr9tkpVUhWZj8bbK678f-wwWy8bYrpaqTnC5_gRx-ul0000__y30000)
 
   ## Class Diagram
+   ![Diagram](https://www.planttext.com/api/plantuml/png/V591JiGm3Bpt5Jd2eUBU0rgfm0s4M3xWfgORb2R5TYjLY9Tnu4by0OTMrRBTaakL6MV67lVxysl70YHzwxFCUc0sjstduuZuX5qakOlKclVC_9xQSUTXJDZ5vOmrA5DbIKwG72pCN3sn2qhurYFB7WPKxEEyQnc3KFGUQV6sX21u8ZQ0TxN2AszM-QLsmsIMphMbT7qUEpI5sGkvqCnCXOqBDsgWHFhCC8Pw3Te3K8CFVLjfroSwLkV187_Xb5r0IkrFz76hZnHVqSez16YmLLATe0B69P0N57ieZqnvS_epAytpw-tC2yCw8clcKwpPPkLQHXzFg-B_NsqFMEX2D2KSaA_I96nqnP1bE-qf_QS_0000__y30000)
 
 
 # Phân tích ca sử dụng Maintain Purchase Order
