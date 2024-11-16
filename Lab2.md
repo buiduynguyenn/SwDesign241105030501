@@ -60,11 +60,63 @@ ProjectManagementDatabase: Tương tác với cơ sở dữ liệu để lấy d
 # Phân tích ca sử dụng Maintain Purchase Order
   ## Các lớp phân tích
 
+ - Boundary:
+  
+PurchaseOrderForm: Giao diện cho phép Commissioned Employee thực hiện các tác vụ như thêm, cập nhật, hoặc xóa thông tin đơn hàng.
+
+ProjectManagementDatabase: Tương tác với cơ sở dữ liệu để lưu trữ, cập nhật, và xóa thông tin đơn hàng.
+
+- Control:
+
+PurchaseOrderController: Xử lý logic nghiệp vụ liên quan đến việc thêm, cập nhật, và xóa đơn hàng. Điều phối giữa lớp giao diện và lớp cơ sở dữ liệu.
+
+- Entity:
+
+PurchaseOrder: Đại diện cho thông tin của một đơn hàng trong hệ thống, bao gồm các thuộc tính như thông tin khách hàng, sản phẩm, ngày tạo, và trạng thái đơn hàng.
+
+
   ## Nhiệm vụ của từng lớp
 
-  ## Sequence Diagram
+ - Boundary:
+
+PurchaseOrderForm:
+
+Hiển thị biểu mẫu để Commissioned Employee chọn tác vụ (thêm, cập nhật, hoặc xóa).
+Thu thập thông tin cần thiết từ Commissioned Employee và gửi đến lớp PurchaseOrderController.
+Hiển thị thông báo thành công hoặc lỗi.
+
+ProjectManagementDatabase:
+
+Kết nối với cơ sở dữ liệu để thực hiện thêm, sửa, hoặc xóa bản ghi đơn hàng.
+Kiểm tra sự tồn tại của đơn hàng dựa trên purchaseOrderId.
+
+- Control:
   
+PurchaseOrderController:
+Nhận yêu cầu từ PurchaseOrderForm và xác định luồng xử lý phù hợp (thêm, cập nhật, hoặc xóa).
+Tương tác với ProjectManagementDatabase để thực hiện các thao tác cần thiết.
+Gửi phản hồi (thành công hoặc lỗi) đến PurchaseOrderForm.
+
+- Entity:
+  
+PurchaseOrder:
+Lưu trữ thông tin chi tiết về đơn hàng, bao gồm:
+purchaseOrderId, customerContact, billingAddress, products, date, và status.
+
+  ## Sequence Diagram
+
+  ![Diagram](https://www.planttext.com/api/plantuml/png/x9V1Rjim38RlUWeUcqEn-mv3WNeRUYXMTDZkZCLbAcJ9fUGCUROTzaXxXL6olI6EdNfEjaiRm4uScvz-aZyLvEVt7rSX8iUciafX6Jt3jQyg4uBnZlJRghP-HwJMld4QUGTt3PTVCT07riJlF5Ugz2woj_jthjilBR4Y5qqS12gD4TTo1NVi7wYCj-XmGvKyMtHtb98mI_2H7Xjo9K5XSCDOmINSed5HZjzCo52u4Ebh8x9NIerb0PTl3lN3Qrd2YWIGzELneJ1Xf5UVQftU2haPQQKE0uUqFpbdfjCz4UMZ9b5iWq8ReLrWe5w1lAPu4yBlKsr2XBed-Lo7Vgr4_9iwI2-sHjCnt98gJCOF4fnoGkBWbi3Hju6q5ZaPDvGceFVaY5Fn6sUaTd1J7CfwIimznOPTbjE7pvQmLnsv-6AaXA4fImfF5sYaPOK9jSLTZu1AJg91aPN5MmV_EvzrsI-ns5ZTPzffB7I-awHvR6WxD7b6fjdyZDReOQ8NQxBURG943zHdcARQr-HMEVO46tH-EZ9r9nXZ7BQaPKrsapukR6OFPx7cDxKp-aXBppoTPvpGXCfJUkEs8vuxawc8sVEfqZDaNxZJxHRJ_Zg-R37FSOlf1qGd3qXh5kqkav0bVIjR64w3vdUnS_RBdl9VznGvhkIK_exy0W00__y30000)
+    
   ## Class Diagram
+
+  ![Diagram](https://www.planttext.com/api/plantuml/png/l5DBQiCm4Dth55gcq5p0YvBI3nGIKiW99jBWgiYIcHaLIkd9kkYHUeMENUVZ9DxMu8NVcoUzUJF--VfUi019QQ8nBWApVIxaNe1nJHxfCLDZFupj7n-uZV2-RYNanBEh0QvHHffx4DYJWsPJd4FcbRvGuodxG9Jfm7rUj7ANar2E4Mbl2BmVbSoyNbtP5RIx2qgh48wBWg_iHYYa-jgU2Jn6d1PCUHiSpMrxZ3vvknCEj2iikVdh1PoSqjiGetxTUayQnYdRKlR5IOSl0yk0Tlqfeg7ZWEX0fHof3vOflwAJ5IJDkS4atQIswdOVACCR_dUYbvVek4HR6N5TH-TREf_VJ2vCPHcJvzwScIhg3vYCgBBGhp2ocIuwyw2oa0H9Xyt6BDH4zwVz0W00__y30000)
+
+-  Giải thích biểu đồ lớp
+  
+PurchaseOrderForm: Lớp boundary hiển thị giao diện người dùng và thu thập thông tin cần thiết để thêm, cập nhật, hoặc xóa đơn hàng.
+PurchaseOrderController: Điều phối logic nghiệp vụ giữa PurchaseOrderForm và ProjectManagementDatabase.
+PurchaseOrder: Lưu trữ thông tin chi tiết về một đơn hàng.
+ProjectManagementDatabase: Kết nối với cơ sở dữ liệu để thực hiện các thao tác CRUD (Create, Read, Update, Delete).
 
 
 # Phân tích ca sử dụng Login
