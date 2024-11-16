@@ -165,12 +165,66 @@ ProjectManagementDatabase: Cung cấp khả năng truy xuất và lưu trữ d�
 
 # Phân tích ca sử dụng Maintain Employee Info
   ## Các lớp phân tích
+  - Boundary:
+    
+EmployeeForm: Giao diện cho phép Payroll Administrator thực hiện các tác vụ như thêm, cập nhật, hoặc xóa thông tin nhân viên. Cung cấp biểu mẫu nhập liệu và hiển thị thông tin phản hồi.
+
+ProjectManagementDatabase: Tương tác với cơ sở dữ liệu để lưu trữ, cập nhật, và xóa thông tin nhân viên.
+
+- Control:
+
+EmployeeController: Xử lý logic nghiệp vụ liên quan đến việc thêm, cập nhật, và xóa nhân viên. Điều phối giữa lớp giao diện và lớp cơ sở dữ liệu.
+
+- Entity:
+
+Employee: Đại diện cho thông tin của một nhân viên trong hệ thống, bao gồm các thuộc tính như tên, loại nhân viên, địa chỉ, mức lương, và các khoản khấu trừ.
+
 
   ## Nhiệm vụ của từng lớp
 
+  - Boundary:
+    
+EmployeeForm:
+
+Hiển thị biểu mẫu để Payroll Administrator chọn tác vụ (thêm, cập nhật, hoặc xóa).
+Thu thập thông tin cần thiết từ Payroll Administrator và gửi đến lớp EmployeeController.
+Hiển thị thông báo thành công hoặc lỗi.
+
+ProjectManagementDatabase:
+
+Kết nối với cơ sở dữ liệu để thực hiện thêm, sửa, hoặc xóa bản ghi nhân viên.
+Kiểm tra sự tồn tại của nhân viên dựa trên employeeId.
+
+- Control:
+
+EmployeeController:
+Nhận yêu cầu từ EmployeeForm và xác định luồng xử lý phù hợp (thêm, cập nhật, hoặc xóa).
+Tương tác với ProjectManagementDatabase để thực hiện các thao tác cần thiết.
+Gửi phản hồi (thành công hoặc lỗi) đến EmployeeForm.
+
+- Entity:
+
+Employee:
+Lưu trữ thông tin chi tiết về nhân viên, bao gồm:
+employeeId, name, type, address, taxDeductions, phoneNumber, salary, commissionRate, và các thuộc tính khác.
+
   ## Sequence Diagram
   
+  ![Diagram](https://www.planttext.com/api/plantuml/png/x5P1JiCm4Bpx5Ni4gNo00m8rW7f0810FSECjCZXsMJj0tyQ19_45rWbfchIXIUa5YHuY9VQEPtPsadw-Vvpw82dacH4o3OxWHYx86NEcCcsr3oJvePYwt2f92pZFviOj42ySPI9rDl3UvSDnUM-G1DgWGxrTA1daL7g46tAFc8OhQUK3Phmj-LuHWYiCmjXbKsrHmHq-vsXJX4JB1v8P72tXu7gEJ4mxwuNOH1YEJXfKuPZX39yBB9BBuE1CgH7SpvaNZY3XjO27eb6o0b4BAu2igc0eSlH126a2C6Gj6FYteNoTrsq90LXfqtR6AuMw0gMdldCR6ByJfR-q9KJqx0STdKv68Fc2OF6r1YDC7QbIK6VX2Yy6kKGRNSOQP98q-6nZSOiX9xjMtklyHb_uPgQvRpvFK_I-lxc9zdCZ5rKXP7pXGuL0myULuxUFcQcKxJGghQuEc91MPV_vO6T8umjkd8-OfSciNi8trb8sVJVxsdEmSjPW9zVJCQ3ntuPtXdIO3Nc1fffCXdlH9jNgpdxIykl4H80YDClmMnTW5hzBUvWC8lx8xJOFiRJ9aXcL-Iu_A__v_WlvhePMHSzMyzYpvvtrlTg-jRf_wwyaFTMjuFVB1ad_aHuUwIBMftoDVvM_0000__y30000)
+  
+  
   ## Class Diagram
+
+  ![Diagram](https://www.planttext.com/api/plantuml/png/j5DBJiCm4Dtx55uMYLuW2rI95gaI1KHFCBL7gP5_yZX84U9aB3WILs0IEMb9qoMMiddlsVFUpEJdwtj56L9kd1L2MI2I6nTjQ14VGdBoGyZ-Q4FHGliSimcU5ZS5hZ4FyZLa6F4YtpTA8T6EFwXnocvI2kd4VKuDt0UVKx0MqsW3j1xOXUQ2bTn179vj8aCuyaPNSf-JyVMjlD1gj3YhdV5HgYyb5c2hvI0lZ0U7KootyG9Z_ua3J-5u31wV6dVWg1EAm49g6Ls7vc2ne2euPuXu5gySUSeUGvCUZJEPYQtFM6CgZ4RTg7w4ic_7AUnB2c-eyWuyJyEXpzqy3q0uzfxW7V-z-HThTSwovm7kZFzPrENoRcvnAadeDVKUn0pVNRiUlPBGBp2Ik2uwhymt33SyWSean8fBTp_MBm000F__0m00)
+  - Giải thích biểu đồ lớp
+  - 
+EmployeeForm: Lớp boundary hiển thị giao diện người dùng và thu thập thông tin cần thiết để thêm, cập nhật, hoặc xóa nhân viên.
+
+EmployeeController: Điều phối logic nghiệp vụ giữa EmployeeForm và ProjectManagementDatabase.
+
+Employee: Lưu trữ thông tin chi tiết về một nhân viên.
+
+ProjectManagementDatabase: Kết nối với cơ sở dữ liệu để thực hiện các thao tác CRUD (Create, Read, Update, Delete).
 
 
 
