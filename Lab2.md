@@ -70,26 +70,32 @@ ProjectManagementDatabase: Tương tác với cơ sở dữ liệu để lấy d
 # Phân tích ca sử dụng Login
   ## Các lớp phân tích
 - Lớp Boundary
+- 
 LoginForm: Cung cấp giao diện cho người dùng nhập tên đăng nhập và mật khẩu, và hiển thị các thông báo lỗi nếu đăng nhập không thành công.
 
 ProjectManagementDatabase: Tương tác với cơ sở dữ liệu quản lý dự án để xác minh thông tin đăng nhập của người dùng.
 
 - Lớp Control
+  
 LoginController: Điều phối logic đăng nhập của hệ thống, bao gồm việc nhận và kiểm tra thông tin từ LoginForm và xác minh thông tin người dùng qua ProjectManagementDatabase.
 
 - Lớp Entity
+  
 User: Đại diện cho tài khoản người dùng trong hệ thống, bao gồm các thuộc tính như tên đăng nhập, mật khẩu và các phương thức để xác minh thông tin.
 
   ## Nhiệm vụ của từng lớp
   - Lớp Boundary
+    
 LoginForm: Hiển thị giao diện đăng nhập, nhận tên đăng nhập và mật khẩu từ người dùng, gửi thông tin này đến LoginController để xác minh và hiển thị thông báo lỗi nếu đăng nhập không hợp lệ.
 
 ProjectManagementDatabase: Kết nối với cơ sở dữ liệu để xác minh thông tin đăng nhập bằng cách kiểm tra tên đăng nhập và mật khẩu.
 
 - Lớp Control
+  
 LoginController: Xử lý logic nghiệp vụ của quá trình đăng nhập. Nhận tên người dùng và mật khẩu từ LoginForm, gửi thông tin đến ProjectManagementDatabase để xác minh tính hợp lệ của tài khoản, và phản hồi đến LoginForm.
 
 - Lớp Entity
+  
 User: Lưu trữ thông tin của người dùng, bao gồm các thuộc tính username và password.
 
   ## Sequence Diagram
