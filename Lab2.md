@@ -282,13 +282,85 @@ ProjectManagementDatabase: Kết nối với cơ sở dữ liệu để thực h
 
 # Phân tích ca sử dụng Run Payroll
   ## Các lớp phân tích
+  
+- Boundary:
+  
+PayrollScheduler: Quản lý việc tự động kích hoạt quy trình chạy bảng lương theo lịch (thứ Sáu hàng tuần và ngày làm việc cuối cùng của tháng).
+
+BankSystemInterface: Giao diện để gửi giao dịch ngân hàng nếu phương thức thanh toán là gửi tiền trực tiếp.
+
+- Control:
+
+PayrollController: Điều phối logic nghiệp vụ cho việc chạy bảng lương, bao gồm:
+Xử lý các phương thức thanh toán.
+Tương tác với hệ thống ngân hàng.
+Xóa nhân viên đã đánh dấu xóa sau khi hoàn tất trả lương
+
+- Entity:
+
+Employee: Lưu trữ thông tin nhân viên cần thiết cho việc tính toán bảng lương, như lương cơ bản, khấu trừ, và phương thức thanh toán.
+Paycheck: Đại diện cho một khoản thanh toán, bao gồm số tiền, trạng thái, và phương thức thanh toán.
 
   ## Nhiệm vụ của từng lớp
 
+- Boundary:
+  
+PayrollScheduler:
+
+Tự động kích hoạt chạy bảng lương vào ngày được chỉ định (thứ Sáu hàng tuần và ngày làm việc cuối cùng của tháng).
+Thông báo nếu có lỗi trong quá trình xử lý.
+
+BankSystemInterface:
+
+Gửi yêu cầu giao dịch ngân hàng cho các khoản thanh toán qua chuyển khoản trực tiếp.
+Xử lý các lỗi khi hệ thống ngân hàng không khả dụng.
+
+- Control:
+
+PayrollController:
+Lấy danh sách nhân viên đủ điều kiện được trả lương.
+Tính toán bảng lương cho từng nhân viên dựa trên thông tin thời gian làm việc, đơn đặt hàng, lương và khấu trừ.
+Xử lý việc in phiếu lương hoặc gửi giao dịch ngân hàng dựa trên phương thức thanh toán của từng nhân viên.
+Xóa nhân viên sau khi hoàn tất quy trình trả lương nếu họ đã được đánh dấu xóa.
+
+- Entity:
+
+Employee:
+
+Chứa thông tin như: loại nhân viên (theo giờ, hưởng lương, hoa hồng), lương cơ bản, số giờ làm việc, khấu trừ, và phương thức thanh toán.
+Paycheck:
+
+Chứa thông tin thanh toán: số tiền thanh toán, trạng thái thanh toán, và phương thức thanh toán (in phiếu, chuyển khoản, hoặc nhận tại văn phòng).
+
+
   ## Sequence Diagram
+
+  ![Diagram](https://www.planttext.com/api/plantuml/png/T5DRJiCm4FptAVO2lG122F4K7qY8Se6jFRHM7JkiRQISZG-En1LOfstQGXifijUQ7KzcDZzVtzUvi9JQ1SEs9A7va0kwkLt1rG0XpZGLngPO90LwuK6NSBifjx1zPH2BBmFTTtr80x2hjKsfxDeiKesEPQ0RZklDZK-nGDxPeb6rOsEq9u3c-AY8UdxdUIdSqOnUQzn9C6OlTNPre84kw4tySgcxVWCbgT4S01I-4wZWLnJn-0HXUvO9mI_zGYMyfv74X9HwUj02R5SJq90-PtblETWQk61aQ50EfQdlr1JgK5R9aS_KiG_Kxl5sFQlzYFnFl7DGYHyH8LlUZQiDZf1nWjrvWItaqAViondovheIpn4TBTg-2CUiO-5Jd5gQ-X6OnzYeHlvKwQm-JPZsZ9Y_YToBw2SASfzYFiQVbD926KxAK8tcS3rhqpFBkbaq6gAZrKkoo1bkoc8AgrCet9YsGy3HVMVplMj870z34zNU_MXUpewDUDcF9DcalShXpBKsjJ_n5m00__y30000)
   
   ## Class Diagram
 
+  ![Diagram](https://www.planttext.com/api/plantuml/png/X5DBJiD03Dtd5BDi5xr05gYKWeH4fOeYiJOp9eqwcObi3rA4E1aBZiGLc8H9-WibcqJFp_Rpi_Fz-JLd0P9GsIpJ5fZL6Xhorcxq5asmIEezKzt32Kc4oJJXGcLH82NuCRWO-JYfTkETjE-3SXJSQIKDLWSBqhQOO5LRto3cwZPzzRIQl4RcI8gAzEu2qw15mHuT9GvAUoW9dAcUVMzKhZPnIbUaI0rDXKvMA5j_5cImG4r4bpwyM4oeYTPfARtZ67aeMHA-zO7usTCEpN6AKYMleCNlF2tREM9of2oyjmXkpB7fliAX_vr9mrHG-U3aLDxbYGGay36gL1N5NVFwTnTe3fU-0BVRD2nOtJj1UWMD-oj2Pvu874DdnwHE0lD1QhyyGg7cFshiUNQmiwkHiylxE-NiF1WpXlNdNUCItv2L0O5n-k1hhWfqI745VnGUCoFlRE0eQPWko-OHQl_37m000F__0m00)
+
+- Giải thích các lớp và phương thức chính
+- 
+PayrollScheduler:
+Quản lý thời gian chạy bảng lương và tự động kích hoạt quy trình theo lịch.
+
+PayrollController:
+Thực hiện các bước xử lý nghiệp vụ, bao gồm:
+Truy xuất danh sách nhân viên cần trả lương.
+Tính toán số tiền lương dựa trên thông tin của nhân viên.
+Điều phối việc in phiếu lương hoặc gửi giao dịch ngân hàng.
+Xóa nhân viên đã đánh dấu xóa sau khi hoàn thành quy trình trả lương.
+
+Employee:
+Lưu trữ dữ liệu về nhân viên và cung cấp phương thức tính toán lương (calculatePay).
+
+Paycheck:
+Lưu trữ thông tin chi tiết về khoản thanh toán, bao gồm số tiền và phương thức thanh toán.
+
+BankSystemInterface:
+Xử lý giao dịch ngân hàng và cung cấp chức năng thử lại khi hệ thống ngân hàng không khả dụng.
 
 
 # Code Java mô phỏng ca sử dụng Maintain Timecard
