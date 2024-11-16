@@ -103,6 +103,14 @@ User: Lưu trữ thông tin của người dùng, bao gồm các thuộc tính u
   
   ## Class Diagram
   ![Diagram](https://www.planttext.com/api/plantuml/png/Z991JWCn34NtEOMNHM8kC0jKKM15fKeL1p0PQmZA99NjeQegJiQ28t45ab5cfhIgH9R_-zjFTdw-lfUYoDfttXZhKGIUO-l2K-GEZWQ6rpZPUJnaRN5Jj9RqHOW3TdIgRLA7VUHcqahsaJdocaImfNDlsrkRdDdz_8EoYa4vUayy0NsWTmqg3VwYBnmrR9LTQ6zXLoX6vQHbXYvzAXYJC1OMVSpF-fJVS7mdgsiCYRMZe0-e-8f25t0hfYRv3hty1p7Dke_H4uOyR3v2LTrTxA46eT08s7c4EQ_9kUkmzOGfi7VwPgwNvaR3rch0uL0aPfd6vo_p2m00__y30000).
+     . Giải thích biểu đồ lớp
+     LoginForm: Hiển thị biểu mẫu đăng nhập và nhận thông tin đăng nhập từ người dùng, sau đó gửi đến LoginController. Nếu đăng nhập thành công, LoginForm sẽ hiển thị thông báo thành công; nếu không, hiển thị thông báo lỗi.
+     
+LoginController: Điều phối logic đăng nhập và tương tác với ProjectManagementDatabase để xác minh thông tin người dùng.
+
+User: Đại diện cho thông tin của người dùng trong hệ thống, bao gồm username và password.
+
+ProjectManagementDatabase: Kết nối với cơ sở dữ liệu và xác minh thông tin đăng nhập của người dùng.
 
 
 
