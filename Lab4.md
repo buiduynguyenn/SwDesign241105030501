@@ -1,4 +1,4 @@
-# 1.Create Administrative Report 
+# 1. Create Administrative Report 
 ## Brief Description 
   Trường hợp sử dụng này cho phép Quản trị viên tiền lương tạo báo cáo "Tổng số giờ làm việc" hoặc "Tổng lương năm đến nay".
 ## Flow of Events 
@@ -69,7 +69,7 @@ Trạng thái hệ thống không thay đổi bởi trường hợp sử dụng 
 ## Extension Points 
 Không có.
 
-# 3.Login
+# 3. Login
 ## Brief Description 
 Trường hợp sử dụng này mô tả cách người dùng đăng nhập vào Hệ thống tiền lương.
 ## Flow of Events 
@@ -91,7 +91,7 @@ Nếu trường hợp sử dụng thành công, người dùng hiện đã đăn
 ## Extension Points 
 Không có.
 
-# 4.Maintain Employee Information 
+# 4. Maintain Employee Information 
 ## Brief Description
 Trường hợp sử dụng này cho phép Quản trị viên tiền lương duy trì thông tin nhân viên. Bao gồm thêm, sửa đổi và xóa thông tin nhân viên khỏi hệ thống.
 ## Flow of Events 
@@ -148,7 +148,7 @@ Nếu trường hợp sử dụng thành công, thông tin nhân viên được 
 ## Extension Points 
 Không có.
 
-# 5.Maintain Purchase Order 
+# 5. Maintain Purchase Order 
 ## Brief Description 
 Trường hợp sử dụng này cho phép Nhân viên kinh doanh ghi nhận và duy trì các đơn đặt hàng. Bao gồm thêm, sửa đổi và xóa đơn đặt hàng. Nhân viên kinh doanh phải ghi nhận từng đơn đặt hàng của họ để nhận hoa hồng.
 ## Flow of Events 
@@ -210,7 +210,7 @@ Nếu trường hợp sử dụng thành công, thông tin đơn đặt hàng đ
 Không có.
 
 
-# 6.Maintain Timecard 
+# 6. Maintain Timecard 
 ## Brief Description 
 Trường hợp sử dụng này cho phép Nhân viên cập nhật và nộp thông tin thẻ công. Nhân viên giờ công và lương cố định phải nộp thẻ công hàng tuần, ghi lại tất cả giờ làm việc trong tuần đó và dự án mà giờ làm được tính phí. Nhân viên chỉ có thể thay đổi thẻ công cho kỳ lương hiện tại và trước khi thẻ công được nộp.
 ## Flow of Events 
@@ -248,7 +248,7 @@ Nếu trường hợp sử dụng thành công, thông tin thẻ công của Nh�
 ## Extension Points 
 Không có.
 
-# 7.Run Payroll 
+# 7. Run Payroll 
 ## Brief Description 
 Trường hợp sử dụng này mô tả cách chương trình tính lương được chạy vào mỗi thứ Sáu và ngày làm việc cuối cùng của tháng.
 ## Flow of Events 
@@ -274,7 +274,7 @@ Thanh toán cho mỗi nhân viên đủ điều kiện được trả lương v�
 ## Extension Points 
 Không có.
 
-# 8.Select Payment Method 
+# 8. Select Payment Method 
 ## Brief Description 
 Trường hợp sử dụng này cho phép Nhân viên chọn phương thức thanh toán. Phương thức thanh toán kiểm soát cách Nhân viên sẽ được trả lương. Nhân viên có thể chọn nhận lương trực tiếp, nhận lương qua thư hoặc chuyển khoản trực tiếp vào tài khoản ngân hàng được chỉ định.
 ## Flow of Events 
